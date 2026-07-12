@@ -1,0 +1,16 @@
+{
+  "name": "玩鑑 PlayRank",
+  "short_name": "玩鑑",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#10102B",
+  "theme_color": "#10102B",
+  "description": "公正透明的手機遊戲評測與即時排行資訊站。",
+  "icons": [
+    {
+      "src": "images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

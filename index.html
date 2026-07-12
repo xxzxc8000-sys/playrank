@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玩鑑 PlayRank — 手遊評測與排行資訊站</title>
+<meta name="description" content="玩鑑 PlayRank 提供公正透明的手機遊戲評測、即時排行榜與試玩體驗，幫助玩家在下載前做出更好的選擇。">
+<meta name="keywords" content="手遊排行,手遊評測,遊戲推薦,手機遊戲,遊戲試玩,手遊評分">
+<link rel="canonical" href="https://example.com/">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="玩鑑 PlayRank — 手遊評測與排行資訊站">
+<meta property="og:description" content="公正透明的手機遊戲評測與即時排行，下載前先看玩鑑。">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:site_name" content="玩鑑 PlayRank">
+<meta property="og:locale" content="zh_TW">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="玩鑑 PlayRank — 手遊評測與排行資訊站">
+<meta name="twitter:description" content="公正透明的手機遊戲評測與即時排行，下載前先看玩鑑。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "玩鑑 PlayRank",
+  "url": "https://example.com/",
+  "logo": "https://example.com/images/logo.svg",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "玩鑑 PlayRank",
+  "url": "https://example.com/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "玩鑑的評分是怎麼計算的？",
+      "acceptedAnswer": { "@type": "Answer", "text": "每款遊戲的評分由玩法深度、畫面表現、營運穩定度與玩家回饋四項指標加權計算，並每週更新一次。" }
+    },
+    {
+      "@type": "Question",
+      "name": "遊戲試玩需要另外下載嗎？",
+      "acceptedAnswer": { "@type": "Answer", "text": "不需要。試玩內容以雲端串流方式直接在瀏覽器中運作，體驗結束後也不會在裝置上留下安裝檔案。" }
+    },
+    {
+      "@type": "Question",
+      "name": "排行榜多久更新一次？",
+      "acceptedAnswer": { "@type": "Answer", "text": "主排行榜每日更新，分類排行榜則於每週一整併上週數據後更新。" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="bg-noise"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">玩</span>
+      <span>玩鑑<span class="logo-sub" style="margin-left:8px;">PLAYRANK</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="主導覽">
+      <ul class="nav-links">
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#games">遊戲介紹</a></li>
+        <li><a href="#trial">遊戲試玩</a></li>
+        <li><a href="#guide">操作說明</a></li>
+        <li><a href="#news">最新活動</a></li>
+        <li><a href="terms.html">權益說明</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-ghost">會員登入</a>
+        <a href="#" class="btn btn-primary">免費註冊</a>
+      </div>
+    </nav>
+
+    <button class="hamburger" aria-label="開啟選單" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="scrim"></div>
+<nav class="mobile-drawer" aria-label="行動裝置選單">
+  <a href="#home">首頁</a>
+  <a href="#games">遊戲介紹</a>
+  <a href="#trial">遊戲試玩</a>
+  <a href="#guide">操作說明</a>
+  <a href="#news">最新活動</a>
+  <a href="terms.html">權益說明</a>
+  <div class="drawer-actions">
+    <a href="#" class="btn btn-ghost">會員登入</a>
+    <a href="#" class="btn btn-primary">免費註冊</a>
+  </div>
+</nav>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">2026 手遊排行 · 每日更新</span>
+        <h1>下載前，先看<br><span class="accent">玩鑑</span>怎麼評分</h1>
+        <p class="lede">玩鑑 PlayRank 用四項公開指標，把上千款手機遊戲拆解成看得懂的分數與排名，讓你在滑動下載前，先看懂這款遊戲值不值得玩。</p>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num"><span data-counter="1280" data-suffix="+">0</span></div>
+            <div class="label">已評測遊戲</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num"><span data-counter="96" data-suffix="%">0</span></div>
+            <div class="label">評分準確回饋</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num"><span data-counter="4.9" data-decimals="1">0</span></div>
+            <div class="label">用戶信任評價</div>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#games" class="btn btn-primary btn-lg">查看即時排行</a>
+          <a href="#trial" class="btn btn-ghost btn-lg">立即試玩</a>
+        </div>
+      </div>
+
+      <div class="rank-stack" aria-hidden="true">
+        <div class="rank-card rank-1" style="top:0; --delay:0.05s; --rot-start:-4deg;">
+          <div class="rank-badge">No.1</div>
+          <div class="rank-icon thumb-2">🗡️</div>
+          <div class="rank-info">
+            <div class="name">蒼嶺紀元</div>
+            <div class="cat">RPG · 開放世界</div>
+          </div>
+          <div>
+            <div class="rank-score">★ 9.4</div>
+            <div class="rank-trend">↑ 本週上升 2 名</div>
+          </div>
+        </div>
+        <div class="rank-card rank-2" style="top:118px; --delay:0.2s; --rot-start:5deg;">
+          <div class="rank-badge">No.2</div>
+          <div class="rank-icon thumb-1">♟️</div>
+          <div class="rank-info">
+            <div class="name">棋道無盡</div>
+            <div class="cat">策略 · 對戰</div>
+          </div>
+          <div>
+            <div class="rank-score">★ 9.1</div>
+            <div class="rank-trend">— 持平</div>
+          </div>
+        </div>
+        <div class="rank-card rank-3" style="top:236px; --delay:0.35s; --rot-start:-3deg;">
+          <div class="rank-badge">No.3</div>
+          <div class="rank-icon thumb-4">🎣</div>
+          <div class="rank-info">
+            <div class="name">深海垂釣手</div>
+            <div class="cat">休閒 · 模擬</div>
+          </div>
+          <div>
+            <div class="rank-score">★ 8.9</div>
+            <div class="rank-trend">↑ 本週上升 5 名</div>
+          </div>
+        </div>
+        <div class="rank-card rank-4" style="top:354px; --delay:0.5s; --rot-start:4deg;">
+          <div class="rank-badge">No.4</div>
+          <div class="rank-icon thumb-5">🏹</div>
+          <div class="rank-info">
+            <div class="name">獵風者</div>
+            <div class="cat">動作 · 射擊</div>
+          </div>
+          <div>
+            <div class="rank-score">★ 8.7</div>
+            <div class="rank-trend">↓ 本週下降 1 名</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <span>SCROLL</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">為什麼是玩鑑</span>
+        <h2>評測不靠感覺，靠得住的四個標準</h2>
+        <p>我們把主觀的「好玩」拆成可驗證的指標，讓每個分數都經得起檢視。</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🎯</div>
+          <h3>玩法深度評測</h3>
+          <p>由專職編輯實測 20 小時以上，記錄核心玩法的深度與重複可玩性。</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">📊</div>
+          <h3>公開評分公式</h3>
+          <p>四項指標權重完全公開，不做黑箱評分，任何人都能檢視計算方式。</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🕹️</div>
+          <h3>雲端即時試玩</h3>
+          <p>免安裝、免下載，直接在瀏覽器中體驗遊戲前 10 分鐘的真實內容。</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🛰️</div>
+          <h3>營運穩定追蹤</h3>
+          <p>持續追蹤更新頻率與伺服器穩定度，避免推薦停止維運的作品。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GAMES / RANKING ================= -->
+  <section class="section" id="games">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">遊戲介紹</span>
+        <h2>本週排行榜精選</h2>
+        <p>依據玩法深度、畫面表現、營運穩定度與玩家回饋四項指標綜合排名。</p>
+      </div>
+
+      <div class="game-grid">
+        <article class="game-card reveal">
+          <div class="game-thumb thumb-2"><span class="tag">RPG</span></div>
+          <div class="game-body">
+            <div class="row1"><h3>蒼嶺紀元</h3><span class="game-score">★ 9.4</span></div>
+            <p class="desc">大型開放世界 RPG，主線劇情與支線密度極高，戰鬥系統操作手感紮實。</p>
+            <div class="game-meta">
+              <span>No.1 · 本週榜首</span>
+              <a href="#trial" class="trial-btn">立即試玩 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <div class="game-thumb thumb-1"><span class="tag">策略</span></div>
+          <div class="game-body">
+            <div class="row1"><h3>棋道無盡</h3><span class="game-score">★ 9.1</span></div>
+            <p class="desc">回合制策略對戰，講究資源運用與盤面判斷，適合喜歡深度思考的玩家。</p>
+            <div class="game-meta">
+              <span>No.2 · 排名持平</span>
+              <a href="#trial" class="trial-btn">立即試玩 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <div class="game-thumb thumb-4"><span class="tag">休閒</span></div>
+          <div class="game-body">
+            <div class="row1"><h3>深海垂釣手</h3><span class="game-score">★ 8.9</span></div>
+            <p class="desc">節奏輕鬆的模擬釣魚遊戲，畫面與音效表現細膩，適合短時間遊玩放鬆。</p>
+            <div class="game-meta">
+              <span>No.3 · 本週上升 5 名</span>
+              <a href="#trial" class="trial-btn">立即試玩 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <div class="game-thumb thumb-5"><span class="tag">動作</span></div>
+          <div class="game-body">
+            <div class="row1"><h3>獵風者</h3><span class="game-score">★ 8.7</span></div>
+            <p class="desc">快節奏射擊動作遊戲，關卡設計多樣，操作回饋明確俐落。</p>
+            <div class="game-meta">
+              <span>No.4 · 本週下降 1 名</span>
+              <a href="#trial" class="trial-btn">立即試玩 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <div class="game-thumb thumb-6"><span class="tag">益智</span></div>
+          <div class="game-body">
+            <div class="row1"><h3>方塊迷城</h3><span class="game-score">★ 8.5</span></div>
+            <p class="desc">解謎關卡設計巧妙，難度曲線循序漸進，適合通勤零碎時間遊玩。</p>
+            <div class="game-meta">
+              <span>No.5 · 新進榜</span>
+              <a href="#trial" class="trial-btn">立即試玩 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="game-card reveal">
+          <div class="game-thumb thumb-3"><span class="tag">模擬</span></div>
+          <div class="game-body">
+            <div class="row1"><h3>星港建造師</h3><span class="game-score">★ 8.4</span></div>
+            <p class="desc">城市建造經營模擬，系統深度足夠，長期遊玩曲線平穩不失新鮮感。</p>
+            <div class="game-meta">
+              <span>No.6 · 本週上升 3 名</span>
+              <a href="#trial" class="trial-btn">立即試玩 →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRIAL ================= -->
+  <section class="section" id="trial">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">遊戲試玩</span>
+        <h2>免安裝，直接在瀏覽器體驗</h2>
+        <p>選定一款遊戲後，雲端試玩會直接串流前段內容，體驗結束不留安裝檔。</p>
+      </div>
+
+      <div class="trial-panel reveal">
+        <div class="trial-device">
+          <div class="notch"></div>
+          <div class="screen-fx"></div>
+          <div class="play-dot"></div>
+        </div>
+
+        <ol class="trial-steps">
+          <li>
+            <span class="n">01</span>
+            <div class="t">
+              <h4>選擇想試玩的遊戲</h4>
+              <p>從排行榜或分類頁挑選一款遊戲，點擊「立即試玩」。</p>
+            </div>
+          </li>
+          <li>
+            <span class="n">02</span>
+            <div class="t">
+              <h4>雲端載入，無需下載安裝</h4>
+              <p>試玩內容以串流方式直接呈現，通常 5 秒內完成連線。</p>
+            </div>
+          </li>
+          <li>
+            <span class="n">03</span>
+            <div class="t">
+              <h4>體驗約 10 分鐘的核心玩法</h4>
+              <p>涵蓋新手教學與一段主要關卡，感受真實操作手感。</p>
+            </div>
+          </li>
+          <li>
+            <span class="n">04</span>
+            <div class="t">
+              <h4>決定是否前往商店下載完整版</h4>
+              <p>覺得合適的話，可一鍵導向 App Store 或 Google Play。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GUIDE ================= -->
+  <section class="section" id="guide">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">操作說明</span>
+        <h2>四個步驟，開始使用玩鑑</h2>
+        <p>從註冊到收藏排行榜，整個流程不到兩分鐘。</p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card reveal">
+          <div class="guide-num">01</div>
+          <h3>建立帳號</h3>
+          <p>使用 Email 或第三方帳號快速註冊，免付費即可使用完整功能。</p>
+        </div>
+        <div class="guide-card reveal">
+          <div class="guide-num">02</div>
+          <h3>設定遊戲偏好</h3>
+          <p>選擇喜歡的遊戲類型，首頁排行榜會依偏好調整呈現順序。</p>
+        </div>
+        <div class="guide-card reveal">
+          <div class="guide-num">03</div>
+          <h3>瀏覽評測與試玩</h3>
+          <p>查看評測全文、四項指標拆解，或直接進行雲端試玩。</p>
+        </div>
+        <div class="guide-card reveal">
+          <div class="guide-num">04</div>
+          <h3>收藏與追蹤更新</h3>
+          <p>收藏喜歡的遊戲，當排名變動或有新版本時會收到通知。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWS ================= -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">最新活動</span>
+        <h2>編輯部動態與排行異動</h2>
+        <p>掌握評測上架、排行榜異動與站內活動的第一手消息。</p>
+      </div>
+
+      <div class="news-list">
+        <div class="news-item reveal">
+          <div class="news-date">07.10</div>
+          <div class="news-content">
+            <span class="cat">排行異動</span>
+            <h3>《蒼嶺紀元》登頂本週 RPG 排行榜</h3>
+            <p>因近期大型更新加入新地圖與職業系統，玩家回饋評分顯著提升，重回榜首。</p>
+          </div>
+        </div>
+        <div class="news-item reveal">
+          <div class="news-date">07.05</div>
+          <div class="news-content">
+            <span class="cat">評測上架</span>
+            <h3>《深海垂釣手》完整評測與試玩開放</h3>
+            <p>編輯部完成 24 小時實測，畫面與音效表現獲得高分肯定，開放雲端試玩。</p>
+          </div>
+        </div>
+        <div class="news-item reveal">
+          <div class="news-date">06.28</div>
+          <div class="news-content">
+            <span class="cat">站內活動</span>
+            <h3>「本季最想玩」玩家票選開跑</h3>
+            <p>邀請站內會員票選最期待的下季新作，結果將於下月公布並收錄進專題報導。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">常見問題</span>
+        <h2>關於玩鑑，你可能想知道</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">玩鑑的評分是怎麼計算的？<span class="plus"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">每款遊戲的評分由玩法深度、畫面表現、營運穩定度與玩家回饋四項指標加權計算，計算方式完全公開，並每週更新一次。</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">遊戲試玩需要另外下載嗎？<span class="plus"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">不需要。試玩內容以雲端串流方式直接在瀏覽器中運作，體驗結束後也不會在裝置上留下任何安裝檔案。</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">排行榜多久更新一次？<span class="plus"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">主排行榜每日更新一次，分類排行榜則於每週一整併上週數據後更新，確保排名反映近期真實狀況。</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">如何提交我自己的遊戲心得？<span class="plus"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">登入會員後，可在每款遊戲的評測頁面留下評分與心得，經編輯部審核後會納入玩家回饋指標的計算。</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <span class="eyebrow" style="justify-content:center;">加入玩鑑</span>
+        <h2>下一款好遊戲，讓排行幫你先篩一輪</h2>
+        <p>免費註冊即可解鎖完整評測內容、收藏排行榜與試玩紀錄。</p>
+        <a href="#" class="btn btn-primary btn-lg">免費註冊帳號</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-mark">玩</span><span>玩鑑 PlayRank</span></div>
+        <p>公正透明的手機遊戲評測與即時排行資訊站，幫助玩家在下載前做出更好的選擇。</p>
+        <div class="social-row">
+          <a href="#" aria-label="LINE">LINE</a>
+          <a href="#" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="Discord">DC</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>快速連結</h4>
+        <ul>
+          <li><a href="#games">遊戲介紹</a></li>
+          <li><a href="#trial">遊戲試玩</a></li>
+          <li><a href="#guide">操作說明</a></li>
+          <li><a href="#news">最新活動</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>權益說明</h4>
+        <ul>
+          <li><a href="terms.html#service">服務條款</a></li>
+          <li><a href="terms.html#privacy">隱私條款</a></li>
+          <li><a href="terms.html#rules">遊戲規章</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>客服支援</h4>
+        <ul>
+          <li><a href="#faq">常見問題</a></li>
+          <li><a href="#">聯絡我們</a></li>
+          <li><a href="#">意見回饋</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 玩鑑 PlayRank. All rights reserved.</span>
+      <span>本站評測內容僅供參考，遊戲下載請至官方商店。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
