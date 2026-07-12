@@ -3,9 +3,9 @@
    ========================================================== */
 :root {
   /* Color */
-  --ink: #10102B;
-  --ink-2: #181B45;
-  --ink-3: #1F2357;
+  --ink: #061A4A;
+--ink-2: #0D2B6B;
+--ink-3: #123B8C;
   --violet: #7C5CFF;
   --violet-bright: #9B82FF;
   --mint: #37E6B5;
@@ -51,7 +51,8 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--ink);
+  background: linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+  ...
   color: var(--white);
   font-family: var(--font-body);
   font-size: 16px;
